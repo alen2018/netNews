@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		244570D3D7CBDA73303A607F /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = D6C942422362D10DD6BF00BA /* libPods.a */; };
 		F700ACAD1C96E18C00DDF2B2 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = F700ACAC1C96E18C00DDF2B2 /* main.m */; };
 		F700ACB01C96E18C00DDF2B2 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = F700ACAF1C96E18C00DDF2B2 /* AppDelegate.m */; };
 		F700ACB31C96E18C00DDF2B2 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F700ACB21C96E18C00DDF2B2 /* ViewController.m */; };
@@ -35,6 +36,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		718518618BE771B5B5E255B9 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
+		9D639ACFFBFC0B65511D8B2C /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
+		D6C942422362D10DD6BF00BA /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		F700ACA81C96E18C00DDF2B2 /* 01--网易新闻.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "01--网易新闻.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		F700ACAC1C96E18C00DDF2B2 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		F700ACAE1C96E18C00DDF2B2 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -58,6 +62,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				244570D3D7CBDA73303A607F /* libPods.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -78,6 +83,23 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		006301CE315FB07DDD8BF4E9 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				718518618BE771B5B5E255B9 /* Pods.debug.xcconfig */,
+				9D639ACFFBFC0B65511D8B2C /* Pods.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		32E268AB3FECBC7E42FB401A /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				D6C942422362D10DD6BF00BA /* libPods.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		F700AC9F1C96E18C00DDF2B2 = {
 			isa = PBXGroup;
 			children = (
@@ -85,6 +107,8 @@
 				F700ACC41C96E18C00DDF2B2 /* 01--网易新闻Tests */,
 				F700ACCF1C96E18C00DDF2B2 /* 01--网易新闻UITests */,
 				F700ACA91C96E18C00DDF2B2 /* Products */,
+				006301CE315FB07DDD8BF4E9 /* Pods */,
+				32E268AB3FECBC7E42FB401A /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -147,9 +171,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = F700ACD51C96E18C00DDF2B2 /* Build configuration list for PBXNativeTarget "01--网易新闻" */;
 			buildPhases = (
+				B97B79B183D9245A5CCE209C /* Check Pods Manifest.lock */,
 				F700ACA41C96E18C00DDF2B2 /* Sources */,
 				F700ACA51C96E18C00DDF2B2 /* Frameworks */,
 				F700ACA61C96E18C00DDF2B2 /* Resources */,
+				29FDF2438FCBAE42D7FE7AF2 /* Embed Pods Frameworks */,
+				9A8643E90ADE5D57E5D6C9AF /* Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -267,6 +294,54 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		29FDF2438FCBAE42D7FE7AF2 /* Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods/Pods-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		9A8643E90ADE5D57E5D6C9AF /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods/Pods-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		B97B79B183D9245A5CCE209C /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		F700ACA41C96E18C00DDF2B2 /* Sources */ = {
@@ -412,6 +487,7 @@
 		};
 		F700ACD61C96E18C00DDF2B2 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 718518618BE771B5B5E255B9 /* Pods.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = "01--网易新闻/Info.plist";
@@ -423,6 +499,7 @@
 		};
 		F700ACD71C96E18C00DDF2B2 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 9D639ACFFBFC0B65511D8B2C /* Pods.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = "01--网易新闻/Info.plist";
@@ -499,6 +576,7 @@
 				F700ACD71C96E18C00DDF2B2 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		F700ACD81C96E18C00DDF2B2 /* Build configuration list for PBXNativeTarget "01--网易新闻Tests" */ = {
 			isa = XCConfigurationList;
@@ -507,6 +585,7 @@
 				F700ACDA1C96E18C00DDF2B2 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		F700ACDB1C96E18C00DDF2B2 /* Build configuration list for PBXNativeTarget "01--网易新闻UITests" */ = {
 			isa = XCConfigurationList;
@@ -515,6 +594,7 @@
 				F700ACDD1C96E18C00DDF2B2 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
